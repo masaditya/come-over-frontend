@@ -11,10 +11,10 @@ import { CreateEventPagesComponent } from "./pages/create-event-pages/create-eve
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { CardEventComponent } from "./components/card-event/card-event.component";
-import { ModalRegisterEventComponent } from "./components/modal-register-event/modal-register-event.component";
 import { ManageEventPagesComponent } from "./pages/manage-event-pages/manage-event-pages.component";
 import { OrganizerProfilePagesComponent } from "./pages/organizer-profile-pages/organizer-profile-pages.component";
 import { UserProfilePagesComponent } from "./pages/user-profile-pages/user-profile-pages.component";
+import { RegisterPageComponent } from './register-page/register-page.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +27,13 @@ import { UserProfilePagesComponent } from "./pages/user-profile-pages/user-profi
     HeaderComponent,
     FooterComponent,
     CardEventComponent,
-    ModalRegisterEventComponent,
     ManageEventPagesComponent,
     OrganizerProfilePagesComponent,
-    UserProfilePagesComponent
+    UserProfilePagesComponent,
+    RegisterPageComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

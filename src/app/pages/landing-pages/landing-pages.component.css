@@ -1,0 +1,18 @@
+/* .form-container{
+    padding-top: 60%;
+    width: 100%;
+    background-color: orangered;
+} */
+
+.background{
+    margin-top: 5%;
+    margin-bottom: 0%;
+    background-color: orangered;
+}
+
+.card{
+    margin-left: 1%;
+    margin-right: 0%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
