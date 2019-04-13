@@ -1,0 +1,18 @@
+.manage-card {
+  background-color: #f23f;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.card-manage-event {
+  border-radius: 3px;
+  margin: 10px 20px;
+  padding: 10px 20px;
+  width: 90%;
+  background-color: antiquewhite;
+}
+
+
+
+.row {}

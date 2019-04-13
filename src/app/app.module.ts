@@ -14,7 +14,7 @@ import { CardEventComponent } from "./components/card-event/card-event.component
 import { ManageEventPagesComponent } from "./pages/manage-event-pages/manage-event-pages.component";
 import { OrganizerProfilePagesComponent } from "./pages/organizer-profile-pages/organizer-profile-pages.component";
 import { UserProfilePagesComponent } from "./pages/user-profile-pages/user-profile-pages.component";
-import { RegisterPageComponent } from './register-page/register-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 @NgModule({
   declarations: [
