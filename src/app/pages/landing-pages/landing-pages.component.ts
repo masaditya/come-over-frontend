@@ -10,5 +10,5 @@ export class LandingPagesComponent implements OnInit {
 
   ngOnInit() {}
 
-  cards: number[] = [1, 2, 4, 5, 6, 3, 2];
+  cards: number[] = [1, 2, 4, 5, 6, 3];
 }

@@ -17,18 +17,23 @@
 }
 
 .date {
-  width: 100px;
+  width: 50px;
   height: 100px;
-  padding: 15px;
+  padding: 15px 5px;
   text-align: center;
-  font-size: 25px;
+  font-size: 15px;
   color: #bdc3c7;
   line-height: 30px;
 }
 
 .info {
   margin-left: 10px;
-  width: 65%;
+  width: 80%;
   height: 100px;
-  background-color: #bdc3c7;
+  color: #bdc3c7;
+  word-wrap: break-word;
+}
+
+.info p {
+  font-size: 12px;
 }
