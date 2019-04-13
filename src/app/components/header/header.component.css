@@ -3,6 +3,7 @@
   box-shadow: none;
   background-color: #ffffff;
   padding: 0px 20px;
+  border-bottom: 1px solid #d5d9e5;
 }
 
 .navbar-brand img {
@@ -72,6 +73,7 @@
 }
 
 .searchContainer {
+  margin-left: 80px;
   display: inline-flex;
   flex: 1 1 400px;
   position: relative;
