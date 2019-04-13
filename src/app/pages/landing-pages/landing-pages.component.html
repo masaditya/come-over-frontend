@@ -1,6 +1,27 @@
-<app-header></app-header>
+<div class="landing background">
+  <div class="container row">
+    <div class="col-sm-7 text-left">
+      <p>Things to do in <br>
+        <strong>Surabaya</strong> <br>
+        Looking for something to do in Surabaya? Whether you're a local, new in town or just cruising through we've got
+        loads of great tips and events. You can explore by location, what's popular, our top picks, free stuff... you
+        got this. Ready?</p>
+    </div>
+    <div class="col-sm-7 splash-right">
+    </div>
+  </div>
+</div>
 
-<body class="background">
+<h2>Events near Surabaya</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let card of cards">
+      <app-card-event></app-card-event>
+    </div>
+  </div>
+</div>
+
+<!-- <body class="background">
   <div class="row">
     <div class="card" style="width: 20rem;">
       <img class="card-img-top" src="facebook.png">
@@ -39,6 +60,4 @@
       </div>
     </div>
   </div>
-</body>
-
-<app-footer></app-footer>
+</body> -->
