@@ -42,3 +42,7 @@ h2 {
   font-weight: bold;
   padding: 30px 50px;
 }
+
+a {
+  text-decoration: none;
+}

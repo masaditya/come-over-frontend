@@ -16,7 +16,9 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4" *ngFor="let card of cards">
-      <app-card-event></app-card-event>
+      <a [routerLink]="['/event', card]">
+        <app-card-event></app-card-event>
+      </a>
     </div>
   </div>
 </div>
