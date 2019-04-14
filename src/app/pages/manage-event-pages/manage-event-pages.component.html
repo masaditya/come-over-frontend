@@ -1,26 +1,28 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-7">
-      <div class="manage-card">
-        <h3>Manage Event</h3>
-        <div class="card-manage-event row">
-          <div class="col-sm-8">
-            <p>Judul Event</p>
-            <div class="row">
-              <i class="fa fa-assistive-listening-systems" aria-hidden="true"></i>
-              <i class="fa fa-assistive-listening-systems" aria-hidden="true"></i>
-              <i class="fa fa-assistive-listening-systems" aria-hidden="true"></i>
+<div class="background">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="manage-card">
+          <h3>Manage Event</h3>
+          <div class="card-manage-event row" *ngFor="let event of myevent">
+            <div class="col-sm-8">
+              <h6>Meetup Malang JS</h6>
+              <p><i class="far fa-calendar"></i> Apr 6, 2019 7:00 PM</p>
+              <div class="row">
+                <li><i class="fas fa-tasks"></i> Manage</li>
+                <li><i class="fas fa-edit"></i> View</li>
+              </div>
+            </div>
+            <div class="col-sm-4 text-center">
+              <h6>Ticket Sold</h6>
+              <h1>5/30</h1>
             </div>
           </div>
-          <div class="col-sm-4">
-            <p>pregrees bar</p>
-          </div>
-
         </div>
       </div>
-    </div>
-    <div class="col-md-5 manage-card">
-      <h4>Manage Event</h4>
+      <div class="col-md-5 manage-card">
+        <h4>Manage Event</h4>
+      </div>
     </div>
   </div>
 </div>

@@ -1,18 +1,40 @@
 .manage-card {
-  background-color: #f23f;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
+    /* background-color: #f23f; */
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.background {
+    background-color: #ecf0f1;
 }
 
 .card-manage-event {
-  border-radius: 3px;
-  margin: 10px 20px;
-  padding: 10px 20px;
-  width: 90%;
-  background-color: antiquewhite;
+    border-radius: 3px;
+    margin: 20px 20px;
+    padding-top: 20px;
+    width: 90%;
+    background-color: #FFFF;
+    color: #95a5a6;
 }
 
+.card-manage-event h6 {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
 
+}
 
-.row {}
+.card-manage-event li {
+    padding: 10px 10px;
+    color: #95a5a6;
+    font: 1em sans-serif;
+    list-style: none;
+    margin-left: 15px;
+    padding-bottom: 20px;
+}
+
+li i {
+    color: #ff561d;
+    padding-right: 5px;
+}
