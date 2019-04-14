@@ -70,7 +70,6 @@ p strong {
 }
 
 #bg img {
-
   position: absolute;
   top: 0;
   left: 0;
@@ -80,4 +79,8 @@ p strong {
   min-width: 50%;
   min-height: 50%;
 
+}
+
+.wrapper {
+  padding-bottom: 100px;
 }

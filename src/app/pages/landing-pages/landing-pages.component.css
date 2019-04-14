@@ -4,6 +4,11 @@
     background-color: orangered;
 } */
 
+* {
+  font-family: 'Muli',
+    sans-serif;
+}
+
 .background {
   background-color: #ff561d;
   max-width: 100%;

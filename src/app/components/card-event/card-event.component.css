@@ -1,8 +1,10 @@
 .card {
   cursor: pointer;
-  width: 22rem;
-  margin: 20px 20px;
+  width: 380px;
+  padding: 10px;
+  border: none;
   border-radius: 20px;
+  margin-bottom: 10px;
 }
 
 .card img {
@@ -10,7 +12,12 @@
   border-top-left-radius: 0px;
 }
 
-.card:hover {
+.card-body {
+  border: 1px #bdc3c7 solid;
+}
+
+
+.card-body:hover {
   -webkit-box-shadow: 0px 2px 2px#ecf0f1;
   -moz-box-shadow: 0px 2px 2px #ecf0f1;
   box-shadow: 0px 1px 2px #bdc3c7;

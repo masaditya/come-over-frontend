@@ -15,11 +15,9 @@
 <h2>Events near Surabaya</h2>
 <div class="container">
   <div class="row">
-    <div class="col-sm-4" *ngFor="let card of cards">
-      <a [routerLink]="['/events', card]">
-        <app-card-event></app-card-event>
-      </a>
-    </div>
+    <a *ngFor="let card of cards" [routerLink]="['/events', card]">
+      <app-card-event></app-card-event>
+    </a>
   </div>
 </div>
 
