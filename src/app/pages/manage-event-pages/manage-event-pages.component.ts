@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { Events } from "src/app/models/events";
+import { EventsService } from "src/app/services/events.service";
 
 @Component({
   selector: "app-manage-event-pages",
@@ -6,9 +8,21 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./manage-event-pages.component.css"]
 })
 export class ManageEventPagesComponent implements OnInit {
-  constructor() {}
+  constructor(private eventServ: EventsService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getEvents();
+  }
 
-  myevent: number[] = [1, 2, 3, 4, 5, 6];
+  // myevent: Events[];
+  myevent: Events[] = [];
+
+  onEventAdded(events: Events) {}
+
+  getEvents() {
+    this.eventServ.getEvents().subscribe(myevent => {
+      this.myevent = myevent;
+      // console.log(myevent);
+    });
+  }
 }

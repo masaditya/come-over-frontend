@@ -8,9 +8,9 @@
             <button class="btn add-event-btn"> <i class="fa fa-plus" aria-hidden="true"></i> Add Event</button>
             <input class="search-event" type="text" placeholder="search for event">
           </div>
-          <div class="card-manage-event row" *ngFor="let event of myevent">
+          <div class="card-manage-event row" *ngFor="let item of myevent; let i = index">
             <div class="col-sm-8">
-              <h6>Meetup Malang JS</h6>
+              <h6> {{i}} {{item.nameEvent}} </h6>
               <p><i class="far fa-calendar"></i> Apr 6, 2019 7:00 PM</p>
               <div class="row">
                 <li><span class="fas fa-tasks"></span> Manage</li>
@@ -25,20 +25,7 @@
         </div>
       </div>
       <div class="col-md-5">
-        <div class="add-form-card">
-          <h2>Add New Event</h2>
-          <hr>
-          <input type="text" placeholder="Event Name">
-          <input type="datetime-local" placeholder="Date Event">
-          <input type="text" placeholder="Location">
-          <input type="text" placeholder="Category">
-          <textarea name="description" id="desc" placeholder="Description"></textarea>
-          <input type="file" name="poster" id="poster">
-          <button class="btn add-event-submit">Add Event</button>
-          <label for="form-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus molestiae
-            accusantium dolorem odit nostrum adipisci repudiandae neque vero sit ullam consectetur, nam qui nesciunt,
-            provident in corrupti, mollitia sed quam!</label>
-        </div>
+        <app-create-event-pages (createdEvent)="onEventAdded($event)"></app-create-event-pages>
       </div>
     </div>
   </div>
