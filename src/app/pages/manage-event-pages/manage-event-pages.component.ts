@@ -8,10 +8,14 @@ import { EventsService } from "src/app/services/events.service";
   styleUrls: ["./manage-event-pages.component.css"]
 })
 export class ManageEventPagesComponent implements OnInit {
+  manageEvents = [];
   constructor(private eventServ: EventsService) {}
 
   ngOnInit() {
-    this.getEvents();
+    this.eventServ.manageEvent().subscribe(res => {
+      this.manageEvents = res;
+      console.log(this.manageEvents.length);
+    });
   }
 
   // myevent: Events[];

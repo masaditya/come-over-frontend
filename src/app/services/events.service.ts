@@ -19,7 +19,16 @@ const httpOptions = {
 })
 export class EventsService {
   constructor(private http: HttpClient) {}
-  private EventsUrl = "http://localhost:3000/events/";
+  private EventsUrl = "http://192.168.100.22:3000/events/";
+  private url = "http://localhost:3000/api";
+
+  landingEvents() {
+    return this.http.get<any>(this.url + "/events");
+  }
+
+  manageEvent() {
+    return this.http.get<any>(this.url + "/special");
+  }
 
   // Get Event
   getEvents(): Observable<Events[]> {

@@ -15,7 +15,7 @@
 <h2>Events near Surabaya</h2>
 <div class="container">
   <div class="row">
-    <a *ngFor="let card of cards" [routerLink]="['/events', card]">
+    <a *ngFor="let card of events" [routerLink]="['/events', card]">
       <app-card-event></app-card-event>
     </a>
   </div>

@@ -17,6 +17,8 @@ import { ManageEventPagesComponent } from "./pages/manage-event-pages/manage-eve
 import { OrganizerProfilePagesComponent } from "./pages/organizer-profile-pages/organizer-profile-pages.component";
 import { UserProfilePagesComponent } from "./pages/user-profile-pages/user-profile-pages.component";
 import { RegisterPageComponent } from "./pages/register-page/register-page.component";
+import { AuthService } from "./services/auth.service";
+import { EventsService } from "./services/events.service";
 
 @NgModule({
   declarations: [
@@ -35,7 +37,7 @@ import { RegisterPageComponent } from "./pages/register-page/register-page.compo
     RegisterPageComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
-  providers: [],
+  providers: [AuthService, EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

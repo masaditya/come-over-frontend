@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { EventsService } from "src/app/services/events.service";
 
 @Component({
   selector: "app-landing-pages",
@@ -6,9 +7,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./landing-pages.component.css"]
 })
 export class LandingPagesComponent implements OnInit {
-  constructor() {}
+  events = [];
+  constructor(private eventService: EventsService) {}
 
-  ngOnInit() {}
-
-  cards: number[] = [1, 2, 4, 5, 6, 3];
+  ngOnInit() {
+    this.eventService.landingEvents().subscribe(res => {
+      this.events = res;
+      console.log(this.events.length);
+    });
+  }
 }

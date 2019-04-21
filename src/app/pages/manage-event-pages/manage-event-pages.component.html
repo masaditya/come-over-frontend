@@ -8,7 +8,7 @@
             <button class="btn add-event-btn"> <i class="fa fa-plus" aria-hidden="true"></i> Add Event</button>
             <input class="search-event" type="text" placeholder="search for event">
           </div>
-          <div class="card-manage-event row" *ngFor="let item of myevent; let i = index">
+          <div class="card-manage-event row" *ngFor="let item of manageEvents; let i = index">
             <div class="col-sm-8">
               <h6> {{i}} {{item.nameEvent}} </h6>
               <p><i class="far fa-calendar"></i> Apr 6, 2019 7:00 PM</p>
