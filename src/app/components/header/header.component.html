@@ -15,9 +15,15 @@
       <li class="nav-item nav-button">
         <a class="nav-link nav-button-text" [routerLink]="['/myevent/manage']">Manage Event</a>
       </li>
-      <li class="nav-item nav-button">
+      <li *ngIf="!isLoggedIn" class="nav-item nav-button">
         <button [routerLink]="['/login']" class="btn sign-in sign-in-text my-2 my-sm-0" style="width:100px;">
           Sign In
+          <i class="fas fa-sign-in-alt" style="margin-left:10%;"></i>
+        </button>
+      </li>
+      <li *ngIf="isLoggedIn" class="nav-item nav-button">
+        <button (click)="logout()" class="btn sign-in sign-in-text my-2 my-sm-0" style="width:100px;">
+          Logout
           <i class="fas fa-sign-in-alt" style="margin-left:10%;"></i>
         </button>
       </li>
