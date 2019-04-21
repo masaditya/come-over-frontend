@@ -5,6 +5,7 @@ import { LandingPagesComponent } from "../pages/landing-pages/landing-pages.comp
 import { DetailEventPagesComponent } from "../pages/detail-event-pages/detail-event-pages.component";
 import { ManageEventPagesComponent } from "../pages/manage-event-pages/manage-event-pages.component";
 import { RegisterPageComponent } from "../pages/register-page/register-page.component";
+import { AuthGuard } from "../auth.guard";
 
 const routes: Routes = [
   { path: "", redirectTo: "/landing", pathMatch: "full" },
@@ -12,7 +13,11 @@ const routes: Routes = [
   { path: "register", component: RegisterPageComponent },
   { path: "login", component: LoginPagesComponent },
   { path: "events/:id", component: DetailEventPagesComponent },
-  { path: "myevent/manage", component: ManageEventPagesComponent }
+  {
+    path: "myevent/manage",
+    component: ManageEventPagesComponent,
+    canActivate: [AuthGuard]
+  }
 ];
 
 @NgModule({

@@ -19,6 +19,7 @@ import { UserProfilePagesComponent } from "./pages/user-profile-pages/user-profi
 import { RegisterPageComponent } from "./pages/register-page/register-page.component";
 import { AuthService } from "./services/auth.service";
 import { EventsService } from "./services/events.service";
+import { AuthGuard } from "./auth.guard";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { EventsService } from "./services/events.service";
     RegisterPageComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
-  providers: [AuthService, EventsService],
+  providers: [AuthService, EventsService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
