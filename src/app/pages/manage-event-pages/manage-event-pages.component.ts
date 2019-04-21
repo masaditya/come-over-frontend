@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Events } from "src/app/models/events";
 import { EventsService } from "src/app/services/events.service";
+import { HttpErrorResponse } from "@angular/common/http";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-manage-event-pages",
@@ -9,13 +11,22 @@ import { EventsService } from "src/app/services/events.service";
 })
 export class ManageEventPagesComponent implements OnInit {
   manageEvents = [];
-  constructor(private eventServ: EventsService) {}
+  constructor(private eventServ: EventsService, private router: Router) {}
 
   ngOnInit() {
-    this.eventServ.manageEvent().subscribe(res => {
-      this.manageEvents = res;
-      console.log(this.manageEvents.length);
-    });
+    this.eventServ.manageEvent().subscribe(
+      res => {
+        this.manageEvents = res;
+        console.log(this.manageEvents.length);
+      },
+      err => {
+        if (err instanceof HttpErrorResponse) {
+          if (err.status === 401) {
+            this.router.navigate(["/login"]);
+          }
+        }
+      }
+    );
   }
 
   // myevent: Events[];
