@@ -6,12 +6,12 @@ import { Router } from "@angular/router";
   providedIn: "root"
 })
 export class AuthService {
-  private url = "http://localhost:3000/api";
+  private url = "http://localhost:3000/user";
 
   constructor(private http: HttpClient, private router: Router) {}
 
   registerUser(user) {
-    return this.http.post<any>(this.url + "/register", user);
+    return this.http.post<any>(this.url + "/signup", user);
   }
 
   loginUser(user) {
