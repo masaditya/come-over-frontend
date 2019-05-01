@@ -21,6 +21,7 @@ import { AuthService } from "./services/auth.service";
 import { EventsService } from "./services/events.service";
 import { AuthGuard } from "./auth.guard";
 import { TokenInterceptorService } from "./services/token-interceptor.service";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,13 @@ import { TokenInterceptorService } from "./services/token-interceptor.service";
     UserProfilePagesComponent,
     RegisterPageComponent
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgbModule
+  ],
   providers: [
     AuthService,
     EventsService,

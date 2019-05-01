@@ -11,6 +11,7 @@ import { Router } from "@angular/router";
 })
 export class ManageEventPagesComponent implements OnInit {
   manageEvents = [];
+  page = 4;
   constructor(private eventServ: EventsService, private router: Router) {}
 
   ngOnInit() {

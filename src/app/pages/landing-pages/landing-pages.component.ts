@@ -12,7 +12,7 @@ export class LandingPagesComponent implements OnInit {
 
   ngOnInit() {
     this.eventService.landingEvents().subscribe(res => {
-      this.events = res;
+      this.events = res.slice(0, 9);
       console.log(this.events.length);
     });
   }

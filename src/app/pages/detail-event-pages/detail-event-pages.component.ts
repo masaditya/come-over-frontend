@@ -1,4 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { EventsService } from "src/app/services/events.service";
+import { Events } from "src/app/models/events";
 
 @Component({
   selector: "app-detail-event-pages",
@@ -6,9 +9,20 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./detail-event-pages.component.css"]
 })
 export class DetailEventPagesComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private route: ActivatedRoute,
+    private eventService: EventsService
+  ) {}
 
-  ngOnInit() {}
+  events: Events;
+
+  ngOnInit() {
+    const id = this.route.snapshot.paramMap.get("_id");
+    this.eventService.getEvent(id).subscribe(res => {
+      // this.events = res;
+      console.log(res);
+    });
+  }
 
   cards: number[] = [1, 2, 4, 5, 6, 3];
 }
