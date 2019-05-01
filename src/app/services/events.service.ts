@@ -19,8 +19,8 @@ const httpOptions = {
 })
 export class EventsService {
   constructor(private http: HttpClient) {}
-  private EventsUrl = "http://localhost:3000";
-  private url = "http://localhost:3000/api";
+  private EventsUrl = "http://192.168.100.22:3000";
+  private url = "http://192.168.100.22:3000/api";
 
   landingEvents() {
     return this.http.get<any>(this.EventsUrl + "/events");
