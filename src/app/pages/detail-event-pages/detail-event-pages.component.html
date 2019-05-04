@@ -8,28 +8,27 @@
       <div class="card-header">
         <div class="row">
           <div class="col-sm-8 image-banner">
-            <img src="../../../assets/banner-dummy.jpeg">
+            <img src="{{ events.posterEvent }}">
           </div>
           <div class="col-sm-4 event-info">
             <h5>APRIL <br> 16 </h5>
-            <p>Meetup #1 - Surabaya JS</p>
-            <h6>By SurabayaJS</h6>
+            <p>{{events.nameEvent}}</p>
+            <h6> {{events.organizerEvent}} </h6>
             <h6> <strong>FREE </strong> </h6>
-            <button class="button-green">Register</button>
+            <button [routerLink]="['/register']" class="button-green">Register</button>
           </div>
         </div>
       </div>
       <div class="card-body">
         <div class="row">
           <div class="col-sm-8 about-event">
-
             <p>Meetup #1 - Surabaya JS <br>
               <strong>at</strong>
               <br>
               AJBS
               <br>
               <strong>
-                14 Jalan Ratna, Wonokromo, Jawa Timur 60246
+                {{events.locationEvent}}
               </strong>
             </p>
           </div>
@@ -38,7 +37,7 @@
             <p>
               <strong>Thu, April 18, 2019
                 <br>
-                6:00 PM – 9:00 PM WIB</strong></p>
+                {{events.timeEvent}}</strong></p>
           </div>
         </div>
       </div>

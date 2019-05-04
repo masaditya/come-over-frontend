@@ -31,6 +31,18 @@ export class EventsService {
     // return this.http.get<any>(this.url + "/special");
   }
 
+
+  // post image poster
+  postPoster(fd){
+    return this.http.post(this.EventsUrl+"/events/poster", fd);
+  }
+
+  // post event
+  postEvent(newEvent){
+    console.log("nyampek kene bro");
+    return this.http.post(this.EventsUrl+"/events", newEvent);
+  }
+
   // Get Event
   getEvents(): Observable<Events[]> {
     return this.http.get<Events[]>(this.EventsUrl).pipe(

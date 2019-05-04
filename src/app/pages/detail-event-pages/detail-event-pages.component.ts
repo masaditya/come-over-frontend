@@ -17,9 +17,10 @@ export class DetailEventPagesComponent implements OnInit {
   events: Events;
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get("_id");
+    const id = this.route.snapshot.paramMap.get("id");
+    console.log("id = "+ id);
     this.eventService.getEvent(id).subscribe(res => {
-      // this.events = res;
+      this.events = res;
       console.log(res);
     });
   }
