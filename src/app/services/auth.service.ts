@@ -30,4 +30,12 @@ export class AuthService {
     localStorage.removeItem("token");
     this.router.navigate(["/landing"]);
   }
+
+  getPayload(){
+    return this.http.get<any>(this.url+"/payload");
+  }
+
+  getUser(id){
+    return this.http.get<any>(this.url+"/"+id)
+  }
 }
