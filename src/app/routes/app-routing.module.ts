@@ -6,17 +6,31 @@ import { DetailEventPagesComponent } from "../pages/detail-event-pages/detail-ev
 import { ManageEventPagesComponent } from "../pages/manage-event-pages/manage-event-pages.component";
 import { RegisterPageComponent } from "../pages/register-page/register-page.component";
 import { AuthGuard } from "../auth.guard";
+import { UserProfilePagesComponent } from '../pages/user-profile-pages/user-profile-pages.component';
+import { CreateEventComponent } from '../pages/create-event/create-event.component';
+import { RegisterEventComponent } from '../pages/register-event/register-event.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/landing", pathMatch: "full" },
   { path: "landing", component: LandingPagesComponent },
-  { path: "register", component: RegisterPageComponent },
+  { path: "register", component: RegisterEventComponent },
   { path: "login", component: LoginPagesComponent },
   { path: "events/:id", component: DetailEventPagesComponent },
+  { path: "signup" , component: RegisterPageComponent},
   {
     path: "myevent/manage",
     component: ManageEventPagesComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path : "profile",
+    component: UserProfilePagesComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path: "create",
+    component: CreateEventComponent,
+    canActivate : [AuthGuard]
   }
 ];
 

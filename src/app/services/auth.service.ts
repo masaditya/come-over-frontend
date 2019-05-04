@@ -6,7 +6,7 @@ import { Router } from "@angular/router";
   providedIn: "root"
 })
 export class AuthService {
-  private url = "http://192.168.100.22:3000/user";
+  private url = "http://192.168.100.5:3000/user";
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -29,5 +29,13 @@ export class AuthService {
   logoutUser() {
     localStorage.removeItem("token");
     this.router.navigate(["/landing"]);
+  }
+
+  getPayload(){
+    return this.http.get<any>(this.url+"/payload");
+  }
+
+  getUser(id){
+    return this.http.get<any>(this.url+"/"+id)
   }
 }

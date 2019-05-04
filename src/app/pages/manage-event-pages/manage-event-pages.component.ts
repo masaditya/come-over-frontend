@@ -33,7 +33,10 @@ export class ManageEventPagesComponent implements OnInit {
   // myevent: Events[];
   myevent: Events[] = [];
 
-  onEventAdded(events: Events) {}
+  onEventAdded(events: Events) {
+    console.log(event)
+    // this.eventServ.postEvent(event);
+  }
 
   getEvents() {
     this.eventServ.getEvents().subscribe(myevent => {

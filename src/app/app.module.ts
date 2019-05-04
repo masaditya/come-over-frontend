@@ -22,6 +22,8 @@ import { EventsService } from "./services/events.service";
 import { AuthGuard } from "./auth.guard";
 import { TokenInterceptorService } from "./services/token-interceptor.service";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { CreateEventComponent } from './pages/create-event/create-event.component';
+import { RegisterEventComponent } from './pages/register-event/register-event.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     ManageEventPagesComponent,
     OrganizerProfilePagesComponent,
     UserProfilePagesComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    CreateEventComponent,
+    RegisterEventComponent
   ],
   imports: [
     BrowserModule,
