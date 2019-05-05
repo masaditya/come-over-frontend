@@ -17,7 +17,7 @@ const httpOptions = {
 export class EventsService {
   constructor(private http: HttpClient) {}
   private EventsUrl = "http://192.168.100.22:3000";
-  private url = "http://192.168.100.5:3000/api";
+  // private url = "http://192.168.100.5:3000/api";
 
   landingEvents() {
     return this.http.get<any>(this.EventsUrl + "/events");
@@ -26,6 +26,10 @@ export class EventsService {
   manageEvent() {
     return this.http.get<any>(this.EventsUrl + "/events");
     // return this.http.get<any>(this.url + "/special");
+  }
+
+  newTicket(body){
+    return this.http.post<any>(this.EventsUrl+"/tickets", body);
   }
 
 
