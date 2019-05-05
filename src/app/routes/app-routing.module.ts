@@ -9,14 +9,18 @@ import { AuthGuard } from "../auth.guard";
 import { UserProfilePagesComponent } from '../pages/user-profile-pages/user-profile-pages.component';
 import { CreateEventComponent } from '../pages/create-event/create-event.component';
 import { RegisterEventComponent } from '../pages/register-event/register-event.component';
+import { RegisterOrganizerComponent } from '../pages/register-organizer/register-organizer.component';
+import { LoginOrganizerComponent } from '../pages/login-organizer/login-organizer.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/landing", pathMatch: "full" },
   { path: "landing", component: LandingPagesComponent },
-  { path: "register", component: RegisterEventComponent },
+  { path: "register/:id", component: RegisterEventComponent },
   { path: "login", component: LoginPagesComponent },
   { path: "events/:id", component: DetailEventPagesComponent },
   { path: "signup" , component: RegisterPageComponent},
+  {path : "organizer/login", component: LoginOrganizerComponent},
+  {path : "organizer/signup", component : RegisterOrganizerComponent},
   {
     path: "myevent/manage",
     component: ManageEventPagesComponent,

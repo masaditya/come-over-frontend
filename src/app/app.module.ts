@@ -24,6 +24,9 @@ import { TokenInterceptorService } from "./services/token-interceptor.service";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { CreateEventComponent } from './pages/create-event/create-event.component';
 import { RegisterEventComponent } from './pages/register-event/register-event.component';
+import { LoginOrganizerComponent } from './pages/login-organizer/login-organizer.component';
+import { RegisterOrganizerComponent } from './pages/register-organizer/register-organizer.component';
+import { MyTicketsComponent } from './pages/my-tickets/my-tickets.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { RegisterEventComponent } from './pages/register-event/register-event.co
     UserProfilePagesComponent,
     RegisterPageComponent,
     CreateEventComponent,
-    RegisterEventComponent
+    RegisterEventComponent,
+    LoginOrganizerComponent,
+    RegisterOrganizerComponent,
+    MyTicketsComponent
   ],
   imports: [
     BrowserModule,

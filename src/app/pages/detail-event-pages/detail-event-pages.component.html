@@ -15,7 +15,7 @@
             <p>{{events.nameEvent}}</p>
             <h6> {{events.organizerEvent}} </h6>
             <h6> <strong>FREE </strong> </h6>
-            <button [routerLink]="['/register']" class="button-green">Register</button>
+            <button [routerLink]="['/register', events._id]" class="button-green">Register</button>
           </div>
         </div>
       </div>

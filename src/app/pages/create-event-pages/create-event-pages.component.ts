@@ -10,7 +10,7 @@ import { EventsService } from 'src/app/services/events.service';
 export class CreateEventPagesComponent implements OnInit {
   @Output() createdEvent = new EventEmitter<Events>();
   poster = null;
-  urlPoster = "";
+  urlPoster = null;
   name = "";
   location = "";
   category = "";
@@ -24,10 +24,10 @@ export class CreateEventPagesComponent implements OnInit {
   addEvent() {
     const fd = new FormData();
     fd.append('poster',this.poster, this.poster.name);
-    this.eventService.postPoster(fd).subscribe(url => {
-      this.urlPoster = url.url;
+    this.eventService.postPoster(fd).subscribe(url  => {
+      this.urlPoster = url;
       console.log(this.urlPoster)
-      this.submitNewEvent(this.urlPoster)
+      this.submitNewEvent(this.urlPoster.url)
     })
   }
 
