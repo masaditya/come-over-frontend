@@ -1,10 +1,59 @@
-<div class="container-fluid">
+<div class="container mt-5 mb-5 form-container ">
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-md-3">
     </div>
-    <div class="col-sm-6">
+    <div class="col-md-6 register-container pt-5 pb-5">
+      <div class="image-login text-center">
+        <!-- <img src="../../../assets/Logo/Iconsfix.png" alt=""> -->
+        <h3> Join Us!</h3>
+        <p>Register with your email</p>
+      </div>
+      <hr>
+      <div class="row text-center mt-5">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" [(ngModel)]="userData.email">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="text" class="form-control" placeholder="Phone" [(ngModel)]="userData.phone">
+          </div>
+        </div>
+      </div>
+      <hr class="mt-4">
+      <div class="text-center">
+        <p>Event Info</p>
+        <div class="row ">
+          <div class="col-sm-6">
+            <strong>Event Name</strong>
+            <p> {{events.nameEvent}} </p>
+          </div>
+          <div class="col-sm-6">
+            <strong>Event Time</strong>
+            <p> {{events.timeEvent}} </p>
+          </div>
+
+          <div class="col-sm-6 mt-3">
+            <strong>Event Location</strong>
+            <p> {{events.locationEvent}} </p>
+          </div>
+          <div class="col-sm-6 mt-3">
+            <strong>Event Category</strong>
+            <p> {{events.categoryEvent}} </p>
+          </div>
+
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <button (click)="newTicket()">Register</button>
+      </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-md-3">
     </div>
   </div>
+
 </div>

@@ -15,7 +15,7 @@ import { LoginOrganizerComponent } from '../pages/login-organizer/login-organize
 const routes: Routes = [
   { path: "", redirectTo: "/landing", pathMatch: "full" },
   { path: "landing", component: LandingPagesComponent },
-  { path: "register", component: RegisterEventComponent },
+  { path: "register/:id", component: RegisterEventComponent },
   { path: "login", component: LoginPagesComponent },
   { path: "events/:id", component: DetailEventPagesComponent },
   { path: "signup" , component: RegisterPageComponent},
