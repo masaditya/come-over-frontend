@@ -32,6 +32,10 @@ export class EventsService {
     return this.http.post<any>(this.EventsUrl+"/tickets", body);
   }
 
+  getTickets(){
+    return this.http.get<any>(this.EventsUrl+"/tickets")
+  }
+
 
   // post image poster
   postPoster(fd){

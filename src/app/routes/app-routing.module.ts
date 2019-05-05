@@ -11,11 +11,12 @@ import { CreateEventComponent } from '../pages/create-event/create-event.compone
 import { RegisterEventComponent } from '../pages/register-event/register-event.component';
 import { RegisterOrganizerComponent } from '../pages/register-organizer/register-organizer.component';
 import { LoginOrganizerComponent } from '../pages/login-organizer/login-organizer.component';
+import { MyTicketsComponent } from '../pages/my-tickets/my-tickets.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/landing", pathMatch: "full" },
   { path: "landing", component: LandingPagesComponent },
-  { path: "register/:id", component: RegisterEventComponent },
+  { path: "register/:id", component: RegisterEventComponent, canActivate : [AuthGuard] },
   { path: "login", component: LoginPagesComponent },
   { path: "events/:id", component: DetailEventPagesComponent },
   { path: "signup" , component: RegisterPageComponent},
@@ -34,6 +35,11 @@ const routes: Routes = [
   {
     path: "create",
     component: CreateEventComponent,
+    canActivate : [AuthGuard]
+  },
+  {
+    path: "ticket",
+    component : MyTicketsComponent,
     canActivate : [AuthGuard]
   }
 ];
