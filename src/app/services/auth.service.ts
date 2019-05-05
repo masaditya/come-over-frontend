@@ -6,7 +6,7 @@ import { Router } from "@angular/router";
   providedIn: "root"
 })
 export class AuthService {
-  private url = "http://192.168.100.5:3000/user";
+  private url = "http://192.168.100.22:3000/user";
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -38,4 +38,16 @@ export class AuthService {
   getUser(id){
     return this.http.get<any>(this.url+"/"+id)
   }
+
+  // organizer
+
+
+  registerOrganizer(user) {
+    return this.http.post<any>(this.url + "/signup", user);
+  }
+
+  loginOrganizer(user) {
+    return this.http.post<any>(this.url + "/login", user);
+  }
+
 }

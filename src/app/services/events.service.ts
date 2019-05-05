@@ -7,9 +7,6 @@ import { Observable, of } from "rxjs";
 import { catchError, map, tap } from "rxjs/operators";
 import { Events } from "../models/events";
 
-// import { Hero } from './hero';
-// import { MessageService } from './message.service';
-
 const httpOptions = {
   headers: new HttpHeaders({ "Content-Type": "application/json" })
 };
@@ -19,7 +16,7 @@ const httpOptions = {
 })
 export class EventsService {
   constructor(private http: HttpClient) {}
-  private EventsUrl = "http://192.168.100.5:3000";
+  private EventsUrl = "http://192.168.100.22:3000";
   private url = "http://192.168.100.5:3000/api";
 
   landingEvents() {
