@@ -50,4 +50,8 @@ export class AuthService {
     return this.http.post<any>(this.url + "/login", user);
   }
 
+  isOrganizer(){
+    return !!localStorage.getItem("organizer")
+  }
+
 }

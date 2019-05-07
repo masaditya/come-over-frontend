@@ -26,7 +26,7 @@ const routes: Routes = [
   {
     path: "myevent/manage",
     component: ManageEventPagesComponent,
-    canActivate: [AuthGuard]
+    canActivate:[AuthGuard]
   },
   {
     path : "profile",
@@ -36,7 +36,8 @@ const routes: Routes = [
   {
     path: "ticket",
     component : MyTicketsComponent,
-    canActivate : [AuthGuard]
+    canActivate : [AuthGuard],
+    
   }
 ];
 

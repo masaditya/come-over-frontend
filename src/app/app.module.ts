@@ -27,6 +27,7 @@ import { LoginOrganizerComponent } from './pages/login-organizer/login-organizer
 import { RegisterOrganizerComponent } from './pages/register-organizer/register-organizer.component';
 import { MyTicketsComponent } from './pages/my-tickets/my-tickets.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { CheckinComponent } from './pages/checkin/checkin.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     LoginOrganizerComponent,
     RegisterOrganizerComponent,
     MyTicketsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CheckinComponent
   ],
   imports: [
     BrowserModule,

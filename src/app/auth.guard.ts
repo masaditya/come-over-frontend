@@ -16,4 +16,13 @@ export class AuthGuard implements CanActivate {
       return false;
     }
   }
+
+  canCreate():boolean{
+    if(this.auth.isOrganizer()){
+      return true;
+    }else{
+      this.router.navigate(["/organizer/login"])
+      return false;
+    }
+  }
 }
