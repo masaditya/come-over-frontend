@@ -12,10 +12,13 @@ import { RegisterEventComponent } from '../pages/register-event/register-event.c
 import { RegisterOrganizerComponent } from '../pages/register-organizer/register-organizer.component';
 import { LoginOrganizerComponent } from '../pages/login-organizer/login-organizer.component';
 import { MyTicketsComponent } from '../pages/my-tickets/my-tickets.component';
+import { NotFoundComponent } from '../pages/not-found/not-found.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/landing", pathMatch: "full" },
+  { path: "**", redirectTo: "/not-found", pathMatch: "full" },
   { path: "landing", component: LandingPagesComponent },
+  { path: "not-found", component: NotFoundComponent },
   { path: "register/:id", component: RegisterEventComponent, canActivate : [AuthGuard] },
   { path: "login", component: LoginPagesComponent },
   { path: "events/:id", component: DetailEventPagesComponent },
