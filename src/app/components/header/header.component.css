@@ -1,103 +1,48 @@
-.navbar {
-  z-index: 6;
-  box-shadow: none;
-  background-color: #ffffff;
-  padding: 0px 20px;
-  border-bottom: 1px solid #d5d9e5;
-}
-
 .navbar-brand img {
-  width: 150px;
+  width: 10rem;
 }
 
-
-.navbar-brand .brand-text {
-  padding: 0px;
-  margin: 0px;
+.navbar {
+  padding: 0px 16px;
+  background-color: #ffff;
+  border-bottom: 1px solid #ff561d;
 }
 
-.navbar-scroll {
-
-  z-index: 5;
-  background: #ffffff;
-  position: fixed;
-  width: 100%;
-  transition: top 0.4s;
-}
-
-.brand-text {}
-
-
-.nav-button {
-  width: max-content;
-  margin-right: 5%;
-  margin-left: 5%;
-
-}
-
-.navbar-default {
-  Background: transparent;
-}
-
-.nav-button-text {
-  white-space: nowrap;
-  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.43;
-  letter-spacing: normal;
-  text-align: left;
-  color: #7f7f7f;
-  width: 100%;
-}
-
-.sign-in {
+.navbar input {
+  width: 50%;
+  max-width: 500px;
+  border: 1px solid #bdc3c7;
   border-radius: 20px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
-  border: solid 2px #d5d9e5;
-  /* margin-top: 3%; */
-  padding: 10%;
-  background-color: #ffffff;
+  padding: 5px 15px;
 }
 
-.sign-in-text {
-  font-size: 14px;
+input::placeholder {
+  color: #bdc3c7;
+}
+
+input:focus {
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.navbar-nav li:hover {
+  margin: auto;
+  padding: 0;
+  background-color: #ff561d;
+}
+
+.navbar-nav li a:hover {
+  color: #ffff;
+}
+
+nav .nav-link {
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.43;
-  letter-spacing: normal;
-  text-align: center;
-  color: #858585;
+  color: #ff561d;
+  margin: 0% 20px;
 }
 
-.searchContainer {
-  margin-left: 80px;
-  display: inline-flex;
-  flex: 1 1 400px;
-  position: relative;
-  border: solid 2px #d5d9e5;
-  background-color: #ffffff;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.searchIcon {
-  padding: 0.5em 1em;
-  padding-top: 2%;
-}
-
-.searchBox {
-  border: 0;
-  padding: 0.5rem 0.5rem 0.5rem 0;
-  flex: 1;
-  font-size: 14px;
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.43;
-  letter-spacing: normal;
-  text-align: left;
-  color: #7f7f7f;
+.float-right {
+  margin-left: auto;
+  margin-right: 0;
 }

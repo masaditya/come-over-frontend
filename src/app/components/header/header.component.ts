@@ -9,6 +9,7 @@ import { AuthService } from "src/app/services/auth.service";
 export class HeaderComponent implements OnInit {
   @Input() isLogin: boolean;
   isLoggedIn: boolean;
+  isNavbarCollapsed=true;
 
   constructor(private auth: AuthService) {}
 

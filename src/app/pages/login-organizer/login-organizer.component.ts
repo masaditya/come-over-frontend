@@ -17,9 +17,8 @@ userData = {};
     console.log(this.userData);
     this.auth.loginUser(this.userData).subscribe(res => {
       console.log(res);
-      localStorage.setItem("token-organizer", res.token);
+      localStorage.setItem("organizer", res.token);
       this.router.navigate(["/myevent/manage"]);
     });
   }
-
 }

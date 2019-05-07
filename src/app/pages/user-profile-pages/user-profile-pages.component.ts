@@ -14,8 +14,8 @@ export class UserProfilePagesComponent implements OnInit {
   ngOnInit() {
     this.authService.getPayload().subscribe(res => {
       console.log(res)
-      this.authService.getUser(res.subject).subscribe(res => {
-        this.user = res;
+      this.authService.getUser(res.subject).subscribe(user => {
+        this.user = user;
         console.log(this.user)
       })
     })
