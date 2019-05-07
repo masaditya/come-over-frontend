@@ -1,0 +1,11 @@
+.error {
+  font-weight: bold;
+}
+
+.container {
+  text-align: -webkit-center;
+  padding: 15% 5%;
+  background-color: #ff561d;
+  margin: 0%;
+  color: #ffff;
+}

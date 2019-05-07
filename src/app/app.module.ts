@@ -27,6 +27,7 @@ import { RegisterEventComponent } from './pages/register-event/register-event.co
 import { LoginOrganizerComponent } from './pages/login-organizer/login-organizer.component';
 import { RegisterOrganizerComponent } from './pages/register-organizer/register-organizer.component';
 import { MyTicketsComponent } from './pages/my-tickets/my-tickets.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MyTicketsComponent } from './pages/my-tickets/my-tickets.component';
     RegisterEventComponent,
     LoginOrganizerComponent,
     RegisterOrganizerComponent,
-    MyTicketsComponent
+    MyTicketsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
