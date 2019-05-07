@@ -67,7 +67,7 @@ h2 {
 }
 
 input:focus {
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  outline: none;
 }
 
 .add-form-card input::placeholder {
@@ -96,7 +96,6 @@ textarea::placeholder {
   padding: 7px 20px;
   font-weight: bold;
   border-radius: 30px;
-  /* margin-left: 30px; */
 }
 
 label {
@@ -104,4 +103,11 @@ label {
   font-size: 11px;
   color: #95a5a6;
   text-align: center;
+}
+
+.add-event-submit:hover {
+
+  color: #ff561d;
+  background-color: #ffff;
+  border: 1px solid #ff561d;
 }

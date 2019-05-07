@@ -7,7 +7,6 @@ import { ManageEventPagesComponent } from "../pages/manage-event-pages/manage-ev
 import { RegisterPageComponent } from "../pages/register-page/register-page.component";
 import { AuthGuard } from "../auth.guard";
 import { UserProfilePagesComponent } from '../pages/user-profile-pages/user-profile-pages.component';
-import { CreateEventComponent } from '../pages/create-event/create-event.component';
 import { RegisterEventComponent } from '../pages/register-event/register-event.component';
 import { RegisterOrganizerComponent } from '../pages/register-organizer/register-organizer.component';
 import { LoginOrganizerComponent } from '../pages/login-organizer/login-organizer.component';
@@ -16,7 +15,6 @@ import { NotFoundComponent } from '../pages/not-found/not-found.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/landing", pathMatch: "full" },
-  { path: "**", redirectTo: "/not-found", pathMatch: "full" },
   { path: "landing", component: LandingPagesComponent },
   { path: "not-found", component: NotFoundComponent },
   { path: "register/:id", component: RegisterEventComponent, canActivate : [AuthGuard] },
@@ -34,11 +32,6 @@ const routes: Routes = [
     path : "profile",
     component: UserProfilePagesComponent,
     canActivate:[AuthGuard]
-  },
-  {
-    path: "create",
-    component: CreateEventComponent,
-    canActivate : [AuthGuard]
   },
   {
     path: "ticket",

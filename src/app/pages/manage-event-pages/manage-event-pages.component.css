@@ -7,6 +7,7 @@
 
 .background {
   background-color: #ecf0f1;
+  padding: 10% auto;
 }
 
 .card-manage-event {
@@ -110,6 +111,7 @@ h2 {
 }
 
 input:focus {
+  outline: none;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
@@ -147,4 +149,8 @@ label {
   font-size: 11px;
   color: #95a5a6;
   text-align: center;
+}
+
+.create {
+  padding-bottom: 3%;
 }

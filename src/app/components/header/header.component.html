@@ -1,32 +1,30 @@
-<nav id="navbar" class="navbar navbar-expand-lg">
-  <a class="navbar-brand brand-text" href="#"><img src="../../../assets/Logo/Iconsfix.png" /></a>
-  <div class="searchContainer">
-    <i class="fa fa-search searchIcon"></i>
-    <input class="searchBox" type="search" name="search" placeholder="Search" />
+<nav class="navbar navbar-expand-md navbar-dark">
+  <div class="text-left">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/Logo/Iconsfix.png" alt="">
+    </a>
   </div>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto ">
-      <li class="nav-item nav-button">
-        <a class="nav-link nav-button-text" href="#">Browse Events</a>
-      </li>
-      <li class="nav-item nav-button">
-        <a class="nav-link nav-button-text" [routerLink]="['/ticket']">Tickets</a>
-      </li>
-      <li class="nav-item nav-button">
-        <a class="nav-link nav-button-text" [routerLink]="['/myevent/manage']">Manage Event</a>
-      </li>
-      <li *ngIf="!isLoggedIn" class="nav-item nav-button">
-        <button [routerLink]="['/login']" class="btn sign-in sign-in-text my-2 my-sm-0" style="width:100px;">
-          Sign In
-          <i class="fas fa-sign-in-alt" style="margin-left:10%;"></i>
-        </button>
-      </li>
-      <li *ngIf="isLoggedIn" class="nav-item nav-button">
-        <button (click)="logout()" class="btn sign-in sign-in-text my-2 my-sm-0" style="width:100px;">
-          Logout
-          <i class="fas fa-sign-in-alt" style="margin-left:10%;"></i>
-        </button>
-      </li>
-    </ul>
+  <div class="float-right text-right">
+    <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed"
+      data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+      <input class="mr-5" type="text" name="search" placeholder="search" id="search">
+      <ul class="navbar-nav mr-auto">
+        <li>
+          <a class="nav-link" [routerLink]="['/ticket']" routerLinkActive="router-link-active">Tickets</a>
+        </li>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link dropdown-toggle" id="id01" ngbDropdownToggle><i class="far fa-user"></i></a>
+          <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
+            <a class="dropdown-item" href="profile">Profiles</a>
+            <a class="dropdown-item" href="myevent/manage">Manage Event</a>
+            <a class="dropdown-item" href="#">JS</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
