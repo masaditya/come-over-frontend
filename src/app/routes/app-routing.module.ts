@@ -12,6 +12,7 @@ import { RegisterOrganizerComponent } from '../pages/register-organizer/register
 import { LoginOrganizerComponent } from '../pages/login-organizer/login-organizer.component';
 import { MyTicketsComponent } from '../pages/my-tickets/my-tickets.component';
 import { NotFoundComponent } from '../pages/not-found/not-found.component';
+import { CheckinComponent } from '../pages/checkin/checkin.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/landing", pathMatch: "full" },
@@ -23,6 +24,8 @@ const routes: Routes = [
   { path: "signup" , component: RegisterPageComponent},
   {path : "organizer/login", component: LoginOrganizerComponent},
   {path : "organizer/signup", component : RegisterOrganizerComponent},
+  {path : "organizer/manage/:id", component : CheckinComponent},
+
   {
     path: "myevent/manage",
     component: ManageEventPagesComponent,

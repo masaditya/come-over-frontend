@@ -34,6 +34,11 @@ export class EventsService {
     return this.http.get<any>(this.EventsUrl+"/tickets")
   }
 
+  getUserListEvent(id){
+    const idevent = id;
+    return this.http.get<any>(this.EventsUrl+"/tickets/event/"+id)
+  }
+
 
   // post image poster
   postPoster(fd){
