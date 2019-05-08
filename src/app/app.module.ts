@@ -28,6 +28,7 @@ import { RegisterOrganizerComponent } from './pages/register-organizer/register-
 import { MyTicketsComponent } from './pages/my-tickets/my-tickets.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { CheckinComponent } from './pages/checkin/checkin.component';
+import {NgxQRCodeModule} from 'ngx-qrcode2'
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { CheckinComponent } from './pages/checkin/checkin.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    NgxQRCodeModule
   ],
   providers: [
     AuthService,

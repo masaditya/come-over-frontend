@@ -10,6 +10,8 @@ export class MyTicketsComponent implements OnInit {
 
   tickets = []
 
+  coba = "wioadwhnioboawdiboiawd"
+
   constructor(private eventService : EventsService) { }
 
   ngOnInit() {

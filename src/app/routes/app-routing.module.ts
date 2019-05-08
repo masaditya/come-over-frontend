@@ -22,18 +22,23 @@ const routes: Routes = [
   { path: "login", component: LoginPagesComponent },
   { path: "events/:id", component: DetailEventPagesComponent },
   { path: "signup" , component: RegisterPageComponent},
-  {path : "organizer/login", component: LoginOrganizerComponent},
-  {path : "organizer/signup", component : RegisterOrganizerComponent},
-  {path : "organizer/manage/:id", component : CheckinComponent},
-
   {
-    path: "myevent/manage",
-    component: ManageEventPagesComponent,
-    canActivate:[AuthGuard]
+    path : "organizer/login", component: LoginOrganizerComponent
+  },
+  {
+    path : "organizer/signup", component : RegisterOrganizerComponent
+  },
+  {
+    path : "organizer/manage/:id", component : CheckinComponent
   },
   {
     path : "profile",
     component: UserProfilePagesComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path: "myevent/manage",
+    component: ManageEventPagesComponent,
     canActivate:[AuthGuard]
   },
   {

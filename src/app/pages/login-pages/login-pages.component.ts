@@ -18,7 +18,7 @@ export class LoginPagesComponent implements OnInit {
     this.auth.loginUser(this.userData).subscribe(res => {
       console.log(res);
       localStorage.setItem("token", res.token);
-      this.router.navigate(["/myevent/manage"]);
+      this.router.navigate(["/"]);
     });
   }
 }
