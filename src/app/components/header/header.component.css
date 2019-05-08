@@ -20,15 +20,14 @@ input::placeholder {
   color: #bdc3c7;
 }
 
-input:focus {
+.navbar input:focus {
   box-shadow: none;
   outline: none;
+  border: #ff561d 1px solid;
   -webkit-appearance: none;
 }
 
 .navbar-nav li:hover {
-  margin: auto;
-  padding: 0;
   background-color: #ff561d;
 }
 
@@ -45,4 +44,16 @@ nav .nav-link {
 .float-right {
   margin-left: auto;
   margin-right: 0;
+}
+
+.float-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.navbar-toggler {
+  font-weight: bold;
+  background-color: #ff561d;
+  color: #ffff;
+  border: 1px solid #ff561d;
 }
