@@ -1,8 +1,9 @@
 <div class="container-fluid">
   <div class="mt-4 mb-4 ticket" *ngFor="let ticket of tickets">
     <div class="d-flex flex-row border rounded">
-      <div class="p-0 w-25">
-        <img src="{{ticket.eventTicket.posterEvent}}" class="img-thumbnail border-0" />
+      <div class="p-0 mr-0 ml-auto text-center w-25">
+        <ngx-qrcode qrc-element-type="url" [qrc-value]="ticket._id"></ngx-qrcode>
+        <!-- <img src="{{ticket.eventTicket.posterEvent}}" class="img-thumbnail border-0" /> -->
       </div>
       <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left text-left">
         <p class="m-0 float-right"> Waktu </p>
@@ -12,7 +13,7 @@
           <li> organized by : </li>
         </ul>
         <p class="text-right m-0">
-          <a class="btn btn-primary"><i class="far fa-user"></i> Download Ticket</a>
+          <button class="btn btn-primary"><i class="far fa-user"></i> Download Ticket</button>
         </p>
       </div>
     </div>
