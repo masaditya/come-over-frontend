@@ -41,15 +41,12 @@ export class AuthService {
 
   // organizer
 
-
-  registerOrganizer(user) {
-    return this.http.post<any>(this.url + "/signup", user);
+  setOrganizer(org){
+    return this.http.patch<any>(this.url+"/", org).pipe();
   }
 
-  loginOrganizer(user) {
-    return this.http.post<any>(this.url + "/login", user);
-  }
 
+  
   isOrganizer(){
     return !!localStorage.getItem("organizer")
   }

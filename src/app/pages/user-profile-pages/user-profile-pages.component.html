@@ -9,7 +9,7 @@
     <div class="col-md-8 pt-3">
       <div class="row">
         <button class="button-profile">Edit Profile</button>
-        <button class="button-profile">Organizer</button>
+        <button *ngIf="user.organizer != null" class="button-profile">Organizer</button>
       </div>
       <hr>
       <label>Contact Information</label>
@@ -37,7 +37,13 @@
         </div>
         <div class="col-sm-4">
           <div class="value">
-            <!-- <p> {{user.organizer}} </p> -->
+            <p *ngIf="user.organizer != null"> {{user.organizer}} </p>
+            <div *ngIf="user.organizer == null">
+              <input class="form-control mb-2" [(ngModel)]="user.organizer" type="text" name="organizer"
+                placeholder="organizer name">
+              <button *ngIf="user.organizer == null" (click)="setOrganizer()" class="button-profile">Create your
+                organizer</button>
+            </div>
           </div>
         </div>
       </div>

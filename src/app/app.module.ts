@@ -23,7 +23,6 @@ import { AuthGuard } from "./auth.guard";
 import { TokenInterceptorService } from "./services/token-interceptor.service";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { RegisterEventComponent } from './pages/register-event/register-event.component';
-import { LoginOrganizerComponent } from './pages/login-organizer/login-organizer.component';
 import { RegisterOrganizerComponent } from './pages/register-organizer/register-organizer.component';
 import { MyTicketsComponent } from './pages/my-tickets/my-tickets.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
@@ -46,7 +45,6 @@ import {NgxQRCodeModule} from 'ngx-qrcode2'
     UserProfilePagesComponent,
     RegisterPageComponent,
     RegisterEventComponent,
-    LoginOrganizerComponent,
     RegisterOrganizerComponent,
     MyTicketsComponent,
     NotFoundComponent,

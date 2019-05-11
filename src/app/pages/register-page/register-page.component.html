@@ -19,13 +19,14 @@
             id="exampleInputPassword1" placeholder="password">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputnamalengkap1" placeholder="nama lengkap">
+          <input type="text" class="form-control" [(ngModel)]="userData.name" name="name" placeholder="nama lengkap">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputnomorhp1" placeholder="nomor handphone">
+          <input type="text" class="form-control" [(ngModel)]="userData.phone" name="phone"
+            placeholder="nomor handphone">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputalamat1" placeholder="alamat">
+          <input type="text" class="form-control" [(ngModel)]="userData.address" name="address" placeholder=" alamat">
         </div>
         <div class="form-group">
           <button (click)="register()" class="btn btn-primary" style="width:100%"> Register</button>
