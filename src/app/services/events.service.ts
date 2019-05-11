@@ -23,7 +23,7 @@ export class EventsService {
   }
 
   manageEvent() {
-    return this.http.get<any>(this.EventsUrl + "/events");
+    return this.http.get<any>(this.EventsUrl + "/events/manage");
   }
 
   newTicket(body){
@@ -38,8 +38,7 @@ export class EventsService {
     const idevent = id;
     return this.http.get<any>(this.EventsUrl+"/tickets/event/"+id)
   }
-
-
+  
   // post image poster
   postPoster(fd){
     return this.http.post(this.EventsUrl+"/events/poster", fd);

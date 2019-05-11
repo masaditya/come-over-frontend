@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from "@angular/core";
 import { Events } from "../../models/events";
 import { EventsService } from 'src/app/services/events.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: "app-create-event-pages",
@@ -16,10 +17,17 @@ export class CreateEventPagesComponent implements OnInit {
   category = "";
   description = "";
   date = "";
+  organizer = ""
 
-  constructor(private eventService: EventsService) {}
+  constructor(private eventService: EventsService, private authService : AuthService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.authService.getPayload().subscribe(res => {
+      this.organizer = res.subject
+      console.log(this.organizer);
+    })
+
+  }
 
   addEvent() {
     const fd = new FormData();
@@ -40,6 +48,7 @@ export class CreateEventPagesComponent implements OnInit {
     newEvent.locationEvent = this.location;
     newEvent.categoryEvent = this.category;
     newEvent.descEvent = this.description;
+    newEvent.organizerEvent = this.organizer
 
     console.log(newEvent);
     this.eventService.postEvent(newEvent).subscribe(res => {

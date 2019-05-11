@@ -10,7 +10,7 @@ export class UserProfilePagesComponent implements OnInit {
 
   constructor(private authService : AuthService) { }
   user = null;
-  input = false
+  input = ""
 
   ngOnInit() {
     this.authService.getPayload().subscribe(res => {
@@ -24,6 +24,8 @@ export class UserProfilePagesComponent implements OnInit {
   }
 
   setOrganizer(){
+    console.log(this.input)
+    this.user.organizer = this.input
     console.log(this.user)
   }
 }
