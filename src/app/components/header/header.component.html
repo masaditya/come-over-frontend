@@ -19,10 +19,10 @@
         <li>
           <a class="nav-link" [routerLink]="['/ticket']" routerLinkActive="router-link-active">Tickets</a>
         </li>
-        <li *ngIf="!isLoggedIn">
+        <li *ngIf="!(isLoggedIn) ">
           <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active">Login</a>
         </li>
-        <li *ngIf="isLoggedIn" class="nav-item dropdown" ngbDropdown>
+        <li *ngIf="(isLoggedIn)" class="nav-item dropdown" ngbDropdown>
           <a class="nav-link dropdown-toggle" id="id01" ngbDropdownToggle><i class="far fa-user"></i></a>
           <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
             <a class="dropdown-item" href="profile">Profiles</a>

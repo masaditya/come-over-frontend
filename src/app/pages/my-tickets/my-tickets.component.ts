@@ -9,8 +9,9 @@ import { EventsService } from 'src/app/services/events.service';
 export class MyTicketsComponent implements OnInit {
 
   tickets = []
+  ticket = null
 
-  coba = "wioadwhnioboawdiboiawd"
+
 
   constructor(private eventService : EventsService) { }
 
@@ -19,6 +20,10 @@ export class MyTicketsComponent implements OnInit {
       this.tickets = tickets;
       console.log(this.tickets);
     })
+  }
+
+  selectedTicket(ticket){
+    this.ticket = ticket
   }
 
 }

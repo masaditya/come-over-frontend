@@ -30,7 +30,7 @@
 
 
 .text-left {
-  padding: 10% 15%;
+  padding: 10% 5%;
   background-color: #ffff;
 }
 
@@ -41,6 +41,12 @@
 .splash-right {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.splash-right img {
+  margin-right: 0;
+  margin-left: auto;
+  width: 100%;
 }
 
 h2 {

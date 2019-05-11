@@ -16,14 +16,14 @@ const httpOptions = {
 })
 export class EventsService {
   constructor(private http: HttpClient) {}
-  private EventsUrl = "http://192.168.100.5:3000";
+  private EventsUrl = "http://localhost:3000";
 
   landingEvents() {
     return this.http.get<any>(this.EventsUrl + "/events");
   }
 
   manageEvent() {
-    return this.http.get<any>(this.EventsUrl + "/events");
+    return this.http.get<any>(this.EventsUrl + "/events/manage");
   }
 
   newTicket(body){
@@ -38,8 +38,7 @@ export class EventsService {
     const idevent = id;
     return this.http.get<any>(this.EventsUrl+"/tickets/event/"+id)
   }
-
-
+  
   // post image poster
   postPoster(fd){
     return this.http.post(this.EventsUrl+"/events/poster", fd);

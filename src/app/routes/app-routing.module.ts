@@ -9,7 +9,6 @@ import { AuthGuard } from "../auth.guard";
 import { UserProfilePagesComponent } from '../pages/user-profile-pages/user-profile-pages.component';
 import { RegisterEventComponent } from '../pages/register-event/register-event.component';
 import { RegisterOrganizerComponent } from '../pages/register-organizer/register-organizer.component';
-import { LoginOrganizerComponent } from '../pages/login-organizer/login-organizer.component';
 import { MyTicketsComponent } from '../pages/my-tickets/my-tickets.component';
 import { NotFoundComponent } from '../pages/not-found/not-found.component';
 import { CheckinComponent } from '../pages/checkin/checkin.component';
@@ -22,9 +21,6 @@ const routes: Routes = [
   { path: "login", component: LoginPagesComponent },
   { path: "events/:id", component: DetailEventPagesComponent },
   { path: "signup" , component: RegisterPageComponent},
-  {
-    path : "organizer/login", component: LoginOrganizerComponent
-  },
   {
     path : "organizer/signup", component : RegisterOrganizerComponent
   },

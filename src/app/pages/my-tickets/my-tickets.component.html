@@ -1,21 +1,28 @@
-<div class="container-fluid">
-  <div class="mt-4 mb-4 ticket" *ngFor="let ticket of tickets">
-    <div class="d-flex flex-row border rounded">
-      <div class="p-0 mr-0 ml-auto text-center w-25">
-        <ngx-qrcode qrc-element-type="url" [qrc-value]="ticket._id"></ngx-qrcode>
-        <!-- <img src="{{ticket.eventTicket.posterEvent}}" class="img-thumbnail border-0" /> -->
-      </div>
-      <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left text-left">
-        <p class="m-0 float-right"> Waktu </p>
-        <h4 class="text-primary"> {{ticket.eventTicket.nameEvent}} </h4>
-        <h5 class="text-info">tempat event</h5>
-        <ul class="m-0 float-left" style="list-style: none; margin:0; padding: 0">
-          <li> organized by : </li>
-        </ul>
-        <p class="text-right m-0">
-          <button class="btn btn-primary"><i class="far fa-user"></i> Download Ticket</button>
-        </p>
+<div class="container-fluid row">
+  <div class="col-md-7">
+    <div class="mt-4 mb-4 ticket" *ngFor="let ticket of tickets">
+      <div class="d-flex flex-row border rounded">
+        <div class="p-0 mr-0 ml-auto text-center w-25">
+          <!-- <ngx-qrcode qrc-element-type="url" [qrc-value]="ticket._id"></ngx-qrcode> -->
+          <img src="{{ticket.eventTicket.posterEvent}}" class="img-thumbnail border-0" />
+        </div>
+        <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left text-left">
+          <p class="m-0 float-right"> Waktu </p>
+          <h4 class="text-primary"> {{ticket.eventTicket.nameEvent}} </h4>
+          <h5 class="text-info">{{ticket.eventTicket.locationEvent}}</h5>
+          <ul class="m-0 float-left" style="list-style: none; margin:0; padding: 0">
+            <li> organized by : {{ticket.eventTicket.organizerEvent}} </li>
+          </ul>
+          <p class="text-right m-0">
+            <button (click)="selectedTicket(ticket)" class="btn btn-primary"><i class="far fa-user"></i> Show Ticket
+            </button>
+          </p>
+        </div>
       </div>
     </div>
+  </div>
+
+  <div *ngIf="ticket" class="mt-4">
+    <ngx-qrcode qrc-element-type="url" [qrc-value]="tickets[0]._id"></ngx-qrcode>
   </div>
 </div>
