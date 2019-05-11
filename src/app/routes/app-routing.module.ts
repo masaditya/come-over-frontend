@@ -10,7 +10,7 @@ import { UserProfilePagesComponent } from '../pages/user-profile-pages/user-prof
 import { RegisterEventComponent } from '../pages/register-event/register-event.component';
 import { RegisterOrganizerComponent } from '../pages/register-organizer/register-organizer.component';
 import { MyTicketsComponent } from '../pages/my-tickets/my-tickets.component';
-import { NotFoundComponent } from '../pages/not-found/not-found.component';
+import { NotFoundComponent } from '../pages/login-pages/not-found/not-found.component';
 import { CheckinComponent } from '../pages/checkin/checkin.component';
 
 const routes: Routes = [
