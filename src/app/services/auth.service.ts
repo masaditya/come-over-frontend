@@ -45,8 +45,6 @@ export class AuthService {
     return this.http.patch<any>(this.url+"/", org).pipe();
   }
 
-
-  
   isOrganizer(){
     return !!localStorage.getItem("organizer")
   }

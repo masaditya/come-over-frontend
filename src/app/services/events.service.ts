@@ -46,9 +46,10 @@ export class EventsService {
 
   // post event
   postEvent(newEvent){
-    console.log("nyampek kene bro");
     return this.http.post(this.EventsUrl+"/events", newEvent);
   }
+
+  
 
   // Get Event
   getEvents(): Observable<Events[]> {

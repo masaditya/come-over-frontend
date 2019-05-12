@@ -57,3 +57,11 @@ h2 {
 a {
   text-decoration: none;
 }
+
+.btn-login {
+  border-radius: 100px;
+  background-color: #ff561d;
+  color: #ffff;
+  font-weight: bold;
+  padding: 5px 20px;
+}

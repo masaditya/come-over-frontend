@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from "@angular/core";
 import { AuthService } from "src/app/services/auth.service";
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, RouterLinkActive, Router } from '@angular/router';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: "app-header",
@@ -11,20 +12,31 @@ import { ActivatedRoute, RouterLinkActive, Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   @Input() isLogin: boolean;
   isLoggedIn: boolean;
-  isNavbarCollapsed=true;
+  isNavbarCollapsed=false;
+  user : User;
 
   constructor(private auth: AuthService, private toastr: ToastrService, private route : Router) {}
 
   ngOnInit() {
     this.isLoggedIn = this.auth.loggedIn();
-    console.log(this.isLogin);
+    if(this.isLoggedIn){
+      this.auth.getPayload().subscribe(payload => {
+        this.auth.getUser(payload.subject).subscribe(user => {
+          this.user = user
+          console.log(this.user)
+        })
+      })
+    }
   }
 
   logout() {
     this.auth.logoutUser();
     this.toastr.success('Logout Success', 'Sampai Jumpa');
     this.route.navigate(['/landing'])
-    window.location.reload();
+    setTimeout(()=>{
+      window.location.reload()
+    }, 2000)
+    
   }
 
   

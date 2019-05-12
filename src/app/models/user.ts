@@ -5,5 +5,6 @@ export class User {
     password : String
     phone : String
     address : String
+    organizer : String
     __v: number;
 }

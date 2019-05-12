@@ -27,17 +27,25 @@ input::placeholder {
   -webkit-appearance: none;
 }
 
+/* 
 .navbar-nav li:hover {
   background-color: #ff561d;
+  color: #ffff;
 }
 
 .navbar-nav li a:hover {
   color: #ffff;
-}
+} */
 
 nav .nav-link {
   font-weight: bold;
   color: #ff561d;
+  margin: 0% 20px;
+}
+
+nav .nav-link:hover {
+  font-weight: bold;
+  color: #ffff;
   margin: 0% 20px;
 }
 

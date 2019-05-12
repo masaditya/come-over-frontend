@@ -23,7 +23,10 @@ export class LoginPagesComponent implements OnInit {
       localStorage.setItem("token", res.token);
       this.toastr.success('Login Success', 'Selamat Datang');
       this.router.navigate(["/landing"]);
-      window.location.reload();      
+      setTimeout(()=>{
+      window.location.reload()
+      }, 2000)
+      
     });
   }
 }

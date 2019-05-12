@@ -8,7 +8,6 @@ import { RegisterPageComponent } from "../pages/register-page/register-page.comp
 import { AuthGuard } from "../auth.guard";
 import { UserProfilePagesComponent } from '../pages/user-profile-pages/user-profile-pages.component';
 import { RegisterEventComponent } from '../pages/register-event/register-event.component';
-import { RegisterOrganizerComponent } from '../pages/register-organizer/register-organizer.component';
 import { MyTicketsComponent } from '../pages/my-tickets/my-tickets.component';
 import { NotFoundComponent } from '../pages/login-pages/not-found/not-found.component';
 import { CheckinComponent } from '../pages/checkin/checkin.component';
@@ -18,12 +17,9 @@ const routes: Routes = [
   { path: "landing", component: LandingPagesComponent },
   { path: "not-found", component: NotFoundComponent },
   { path: "register/:id", component: RegisterEventComponent, canActivate : [AuthGuard] },
-  { path: "login", component: LoginPagesComponent, canDeactivate : [AuthGuard] },
+  { path: "login", component: LoginPagesComponent},
   { path: "events/:id", component: DetailEventPagesComponent },
   { path: "signup" , component: RegisterPageComponent},
-  {
-    path : "organizer/signup", component : RegisterOrganizerComponent
-  },
   {
     path : "organizer/manage/:id", component : CheckinComponent
   },
@@ -35,7 +31,7 @@ const routes: Routes = [
   {
     path: "myevent/manage",
     component: ManageEventPagesComponent,
-    canActivate:[AuthGuard]
+    canActivate:[AuthGuard],
   },
   {
     path: "ticket",

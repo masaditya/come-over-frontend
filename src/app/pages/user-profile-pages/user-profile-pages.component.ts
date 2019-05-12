@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-user-profile-pages',
@@ -8,7 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class UserProfilePagesComponent implements OnInit {
 
-  constructor(private authService : AuthService) { }
+  constructor(private authService : AuthService, private toastr : ToastrService) { }
   user = null;
   input = ""
 
@@ -17,7 +18,7 @@ export class UserProfilePagesComponent implements OnInit {
       console.log(res)
       this.authService.getUser(res.subject).subscribe(user => {
         this.user = user;
-        console.log(this.user)
+        
       })
     })
 
@@ -27,5 +28,9 @@ export class UserProfilePagesComponent implements OnInit {
     console.log(this.input)
     this.user.organizer = this.input
     console.log(this.user)
+    this.authService.setOrganizer(this.user).subscribe(result => {
+          console.log(result)
+          this.toastr.success("Organizer has been set", "Hello there!")
+        })
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, EventEmitter, Output } from "@angular/core";
 import { Events } from "../../models/events";
 import { EventsService } from 'src/app/services/events.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: "app-create-event-pages",
@@ -19,7 +20,7 @@ export class CreateEventPagesComponent implements OnInit {
   date = "";
   organizer = ""
 
-  constructor(private eventService: EventsService, private authService : AuthService) {}
+  constructor(private eventService: EventsService, private authService : AuthService, private toastr : ToastrService) {}
 
   ngOnInit() {
     this.authService.getPayload().subscribe(res => {
@@ -53,6 +54,7 @@ export class CreateEventPagesComponent implements OnInit {
     console.log(newEvent);
     this.eventService.postEvent(newEvent).subscribe(res => {
       console.log(res)
+      this.toastr.success("New Event Created", "Successfully")
     })
     // this.createdEvent.emit(newEvent);
     this.name = "";

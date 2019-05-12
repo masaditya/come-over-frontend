@@ -12,7 +12,7 @@
           <div class="col-sm-4 event-info">
             <h5>{{mnth}}<br> {{date}} </h5>
             <p>{{events.nameEvent}}</p>
-            <h6> {{events.organizerEvent}} </h6>
+            <h6> by : {{user.organizer}} </h6>
             <h6> <strong>FREE </strong> </h6>
             <button [routerLink]="['/register', events._id]" class="button-green">Register</button>
           </div>
