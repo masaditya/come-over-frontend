@@ -9,7 +9,8 @@
     <div class="col-md-8 pt-3">
       <div class="row">
         <button class="button-profile">Edit Profile</button>
-        <button *ngIf="user.organizer != null" class="button-profile">Organizer</button>
+        <button [routerLink]="['/myevent/manage']" routerLinkActive="router-link-active" *ngIf="user.organizer != null"
+          class="button-profile">Organizer</button>
       </div>
       <hr>
       <label>Contact Information</label>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "src/app/services/auth.service";
 import { Router } from "@angular/router";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: "app-login-pages",
@@ -9,7 +10,7 @@ import { Router } from "@angular/router";
 })
 export class LoginPagesComponent implements OnInit {
   userData = {};
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(private auth: AuthService, private router: Router, private toastr : ToastrService) {}
 
   ngOnInit() {}
 
@@ -18,7 +19,9 @@ export class LoginPagesComponent implements OnInit {
     this.auth.loginUser(this.userData).subscribe(res => {
       console.log(res);
       localStorage.setItem("token", res.token);
-      this.router.navigate(["/"]);
+      this.toastr.success('Login Success', 'Selamat Datang');
+      this.router.navigate(["/landing"]);
+      window.location.reload();      
     });
   }
 }

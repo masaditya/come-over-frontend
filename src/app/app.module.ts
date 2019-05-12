@@ -1,6 +1,9 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+ 
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
 import { AppRoutingModule } from "./routes/app-routing.module";
@@ -25,7 +28,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { RegisterEventComponent } from './pages/register-event/register-event.component';
 import { RegisterOrganizerComponent } from './pages/register-organizer/register-organizer.component';
 import { MyTicketsComponent } from './pages/my-tickets/my-tickets.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { NotFoundComponent } from './pages/login-pages/not-found/not-found.component';
 import { CheckinComponent } from './pages/checkin/checkin.component';
 import {NgxQRCodeModule} from 'ngx-qrcode2'
 
@@ -56,7 +59,9 @@ import {NgxQRCodeModule} from 'ngx-qrcode2'
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
-    NgxQRCodeModule
+    NgxQRCodeModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     AuthService,
@@ -69,5 +74,6 @@ import {NgxQRCodeModule} from 'ngx-qrcode2'
     }
   ],
   bootstrap: [AppComponent]
+  // declarations: [AppComponent]
 })
 export class AppModule {}

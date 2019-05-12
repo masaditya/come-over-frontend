@@ -10,7 +10,7 @@ import { UserProfilePagesComponent } from '../pages/user-profile-pages/user-prof
 import { RegisterEventComponent } from '../pages/register-event/register-event.component';
 import { RegisterOrganizerComponent } from '../pages/register-organizer/register-organizer.component';
 import { MyTicketsComponent } from '../pages/my-tickets/my-tickets.component';
-import { NotFoundComponent } from '../pages/not-found/not-found.component';
+import { NotFoundComponent } from '../pages/login-pages/not-found/not-found.component';
 import { CheckinComponent } from '../pages/checkin/checkin.component';
 
 const routes: Routes = [
@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: "landing", component: LandingPagesComponent },
   { path: "not-found", component: NotFoundComponent },
   { path: "register/:id", component: RegisterEventComponent, canActivate : [AuthGuard] },
-  { path: "login", component: LoginPagesComponent },
+  { path: "login", component: LoginPagesComponent, canDeactivate : [AuthGuard] },
   { path: "events/:id", component: DetailEventPagesComponent },
   { path: "signup" , component: RegisterPageComponent},
   {

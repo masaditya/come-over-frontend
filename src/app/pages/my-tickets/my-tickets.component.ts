@@ -11,8 +11,6 @@ export class MyTicketsComponent implements OnInit {
   tickets = []
   ticket = null
 
-
-
   constructor(private eventService : EventsService) { }
 
   ngOnInit() {
