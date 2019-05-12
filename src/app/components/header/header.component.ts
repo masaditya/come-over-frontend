@@ -12,7 +12,7 @@ import { User } from 'src/app/models/user';
 export class HeaderComponent implements OnInit {
   @Input() isLogin: boolean;
   isLoggedIn: boolean;
-  isNavbarCollapsed=false;
+  isNavbarCollapsed=true;
   user : User;
 
   constructor(private auth: AuthService, private toastr: ToastrService, private route : Router) {}

@@ -12,12 +12,14 @@ export class CheckinComponent implements OnInit {
   constructor(private eventService : EventsService, private route : ActivatedRoute) { }
 
   users = []
+  tickets = []
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get("id");
     console.log("id = "+ id);
     this.eventService.getUserListEvent(id).subscribe(res => {
       res.map(user => {
         this.users.push(user.userTicket)
+        this.tickets.push(user.status)
       })
       console.log(this.users)
     })
