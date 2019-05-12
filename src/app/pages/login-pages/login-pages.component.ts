@@ -9,7 +9,9 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ["./login-pages.component.css"]
 })
 export class LoginPagesComponent implements OnInit {
-  userData = {};
+  userData : any = {
+  };
+  
   constructor(private auth: AuthService, private router: Router, private toastr : ToastrService) {}
 
   ngOnInit() {}
