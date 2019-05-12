@@ -1,6 +1,5 @@
   <div id="bg">
-    <img
-      src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/yRF5c-O/fancy-rings-motion-background-flat-design-4k-and-full-hd-orange_s_xntfyf__F0000.png">
+    <img src="https://www.onlygfx.com/wp-content/uploads/2016/10/star-doodle-bg.png">
   </div>
 
   <div class="container wrapper">
@@ -11,7 +10,7 @@
             <img src="{{ events.posterEvent }}">
           </div>
           <div class="col-sm-4 event-info">
-            <h5>APRIL <br> 16 </h5>
+            <h5>{{mnth}}<br> {{date}} </h5>
             <p>{{events.nameEvent}}</p>
             <h6> {{events.organizerEvent}} </h6>
             <h6> <strong>FREE </strong> </h6>
@@ -22,22 +21,23 @@
       <div class="card-body">
         <div class="row">
           <div class="col-sm-8 about-event">
-            <p>Meetup #1 - Surabaya JS <br>
+            <p>{{events.nameEvent}}<br>
               <strong>at</strong>
-              <br>
-              AJBS
-              <br>
               <strong>
                 {{events.locationEvent}}
               </strong>
+              <br><br>
+              {{events.descEvent}}
             </p>
           </div>
           <div class="col-sm-4 about-event">
             <p> Date and Time</p>
             <p>
-              <strong>Thu, April 18, 2019
+              <strong>
                 <br>
-                {{events.timeEvent}}</strong></p>
+                <h5>{{mnth}} {{date}} </h5>
+                {{events.timeEvent.split("T")[1]}}
+              </strong></p>
           </div>
         </div>
       </div>

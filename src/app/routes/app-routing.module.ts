@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: "landing", component: LandingPagesComponent },
   { path: "not-found", component: NotFoundComponent },
   { path: "register/:id", component: RegisterEventComponent, canActivate : [AuthGuard] },
-  { path: "login", component: LoginPagesComponent },
+  { path: "login", component: LoginPagesComponent, canDeactivate : [AuthGuard] },
   { path: "events/:id", component: DetailEventPagesComponent },
   { path: "signup" , component: RegisterPageComponent},
   {

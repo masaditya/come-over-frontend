@@ -23,7 +23,8 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.auth.logoutUser();
     this.toastr.success('Logout Success', 'Sampai Jumpa');
-    this.route.navigate(['/'])
+    this.route.navigate(['/landing'])
+    window.location.reload();
   }
 
   

@@ -9,6 +9,7 @@ import { Events } from "src/app/models/events";
 export class CardEventComponent implements OnInit {
   @Input() perEvent: Events;
   date : String;
+  mnth 
   months = [
     'January', 'February', 'March', 'April', 'May',
     'June', 'July', 'August', 'September',
@@ -20,7 +21,7 @@ export class CardEventComponent implements OnInit {
     const dtemp = this.perEvent.timeEvent.split("-")[2]
     this.date = dtemp.split("T")[0]
     const mtemp = this.perEvent.timeEvent.split("-")[1]
-    console.log(mtemp)
+    this.mnth = this.months[+mtemp-1].slice(0, 3)
     console.log(this.perEvent)
   }
 }

@@ -16,7 +16,7 @@ const httpOptions = {
 })
 export class EventsService {
   constructor(private http: HttpClient) {}
-  private EventsUrl = "http://localhost:3000";
+  private EventsUrl = "https://come-over.herokuapp.com";
 
   landingEvents() {
     return this.http.get<any>(this.EventsUrl + "/events");

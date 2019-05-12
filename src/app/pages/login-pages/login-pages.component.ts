@@ -20,7 +20,8 @@ export class LoginPagesComponent implements OnInit {
       console.log(res);
       localStorage.setItem("token", res.token);
       this.toastr.success('Login Success', 'Selamat Datang');
-      this.router.navigate(["/"]);
+      this.router.navigate(["/landing"]);
+      window.location.reload();      
     });
   }
 }
