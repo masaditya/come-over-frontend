@@ -42,8 +42,7 @@
             <div *ngIf="user.organizer == null">
               <input class="form-control mb-2" [(ngModel)]="input" type="text" name="organizer"
                 placeholder="organizer name">
-              <button *ngIf="user.organizer == null" (click)="setOrganizer()" class="button-profile">Create your
-                organizer</button>
+              <button *ngIf="user.organizer == null" (click)="setOrganizer()" class="button-profile">create organizer</button>
             </div>
           </div>
         </div>

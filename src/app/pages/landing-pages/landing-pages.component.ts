@@ -16,4 +16,7 @@ export class LandingPagesComponent implements OnInit {
       console.log(this.events.length);
     });
   }
+
+
+  
 }

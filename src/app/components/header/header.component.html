@@ -13,13 +13,13 @@
     <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
       <ul class="navbar-nav mr-auto">
         <li>
-          <a class="nav-link" [routerLink]="['/landing']" routerLinkActive="router-link-active">Events</a>
+          <a class="nav-link" [routerLink]="['/landing']" >Events</a>
         </li>
         <li>
-          <a class="nav-link" [routerLink]="['/ticket']" routerLinkActive="router-link-active">Tickets</a>
+          <a class="nav-link" [routerLink]="['/ticket']" >Tickets</a>
         </li>
         <li *ngIf="!(isLoggedIn) ">
-          <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active">Login</a>
+          <a class="nav-link" [routerLink]="['/login']" >Login</a>
         </li>
         <li *ngIf="(isLoggedIn)" class="nav-item dropdown" ngbDropdown>
           <a class="nav-link dropdown-toggle" id="id01" ngbDropdownToggle><i class="far fa-user"></i></a>

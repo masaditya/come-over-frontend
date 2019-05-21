@@ -20,13 +20,19 @@ export class LoginPagesComponent implements OnInit {
     console.log(this.userData);
     this.auth.loginUser(this.userData).subscribe(res => {
       console.log(res);
-      localStorage.setItem("token", res.token);
-      this.toastr.success('Login Success', 'Selamat Datang');
-      this.router.navigate(["/landing"]);
-      setTimeout(()=>{
-      window.location.reload()
-      }, 2000)
-      
+      if(res.token != null){
+          localStorage.setItem("token", res.token);
+          this.toastr.success('Login Success', 'Selamat Datang');
+          this.router.navigate(["/landing"]);
+          setTimeout(()=>{
+          window.location.reload()
+          }, 2000)
+      }else{
+          this.toastr.error('Login Failed', 'Try Again');
+          setTimeout(()=>{
+          window.location.reload()
+          }, 500)
+      }
     });
   }
 }

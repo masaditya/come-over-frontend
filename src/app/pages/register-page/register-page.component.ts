@@ -19,12 +19,16 @@ export class RegisterPageComponent implements OnInit {
     console.log(this.userData);
     this.auth.registerUser(this.userData).subscribe(res => {
       console.log(res);
-      localStorage.setItem("token", res.token);
-      this.router.navigate(["/landing"]);
-      this.toastr.success('Login Success', 'Selamat Datang');
-      setTimeout(()=>{
-      window.location.reload()
-      }, 2000)
+      if(res.token != null){
+        localStorage.setItem("token", res.token);
+        this.router.navigate(["/login"]);
+        this.toastr.success('Register Success', 'Silahkan Login untuk melanjutkan');
+      }else{
+        this.toastr.error('Register Failed', 'Field tidak boleh kosong');
+        setTimeout(()=>{
+        window.location.reload()
+        }, 1000)
+      }
     });
   }
 }
