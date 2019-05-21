@@ -19,24 +19,39 @@ export class EventsService {
   private EventsUrl = "https://come-over.herokuapp.com";
 
   landingEvents() {
-    return this.http.get<any>(this.EventsUrl + "/events");
+    return this.http.get<any>(this.EventsUrl + "/events").pipe(
+      tap(_ => this.log("fetched Events")),
+      catchError(this.handleError<Events[]>("getEvents", []))
+    );
   }
 
   manageEvent() {
-    return this.http.get<any>(this.EventsUrl + "/events/manage");
+    return this.http.get<any>(this.EventsUrl + "/events/manage").pipe(
+      tap(_ => this.log("fetched Events")),
+      catchError(this.handleError<Events[]>("getEvents", []))
+    );
   }
 
   newTicket(body){
-    return this.http.post<any>(this.EventsUrl+"/tickets", body);
+    return this.http.post<any>(this.EventsUrl+"/tickets", body).pipe(
+      tap(_ => this.log("fetched Events")),
+      catchError(this.handleError<Events[]>("getEvents", []))
+    );
   }
 
   getTickets(){
-    return this.http.get<any>(this.EventsUrl+"/tickets")
+    return this.http.get<any>(this.EventsUrl+"/tickets").pipe(
+      tap(_ => this.log("fetched Events")),
+      catchError(this.handleError<Events[]>("getEvents", []))
+    );
   }
 
   getUserListEvent(id){
     const idevent = id;
-    return this.http.get<any>(this.EventsUrl+"/tickets/event/"+id)
+    return this.http.get<any>(this.EventsUrl+"/tickets/event/"+id).pipe(
+      tap(_ => this.log("fetched Events")),
+      catchError(this.handleError<Events[]>("getEvents", []))
+    );
   }
   
   // post image poster
@@ -49,6 +64,14 @@ export class EventsService {
     return this.http.post(this.EventsUrl+"/events", newEvent);
   }
 
+  // set attend
+  setAttend(tick){
+    console.log(tick);
+    return this.http.patch(this.EventsUrl+"/tickets/"+tick+"/done", tick).pipe(
+      tap(_ => this.log("fetched Events")),
+      catchError(this.handleError<Events[]>("getEvents", []))
+    );
+  }
   
 
   // Get Event

@@ -12,6 +12,17 @@ import { Router } from "@angular/router";
 export class ManageEventPagesComponent implements OnInit {
   manageEvents = [];
   page = 4;
+
+  date : String;
+  mnth 
+  months = [
+    'January', 'February', 'March', 'April', 'May',
+    'June', 'July', 'August', 'September',
+    'October', 'November', 'December'
+    ];
+
+
+
   constructor(private eventServ: EventsService, private router: Router) {}
 
   ngOnInit() {

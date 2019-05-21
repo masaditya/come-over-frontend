@@ -20,9 +20,17 @@ export class CheckinComponent implements OnInit {
       res.map(user => {
         this.users.push(user.userTicket)
         this.tickets.push(user.status)
+        
       })
-      console.log(this.users)
+      console.log("jumlah ticket :"+this.users.length)
     })
   }
+
+  setAttend(tick){
+    this.eventService.setAttend(tick).subscribe(res => {
+      console.log(res);
+    })
+  }
+
 
 }
