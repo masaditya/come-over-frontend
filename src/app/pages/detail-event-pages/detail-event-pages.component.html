@@ -1,3 +1,47 @@
-<p>
-  detail-event-pages works!
-</p>
+  <div id="bg">
+    <img src="https://www.onlygfx.com/wp-content/uploads/2016/10/star-doodle-bg.png">
+  </div>
+
+  <div class="container wrapper">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-sm-8 image-banner">
+            <img src="{{ events.posterEvent }}">
+          </div>
+          <div class="col-sm-4 event-info">
+            <h5>{{mnth}}<br> {{date}} </h5>
+            <p>{{events.nameEvent}}</p>
+            <h6> by : {{user.organizer}} </h6>
+            <h6> <strong>FREE </strong> </h6>
+            <button [routerLink]="['/register', events._id]" class="button-green">Register</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-8 about-event">
+            <p>{{events.nameEvent}}<br>
+              <strong>at</strong>
+              <strong>
+                {{events.locationEvent}}
+              </strong>
+              <br><br>
+              {{events.descEvent}}
+            </p>
+          </div>
+          <div class="col-sm-4 about-event">
+            <p> Date and Time</p>
+            <p>
+              <strong>
+                <br>
+                <h5>{{mnth}} {{date}} </h5>
+                {{events.timeEvent.split("T")[1]}}
+              </strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+      </div>
+    </div>
+  </div>

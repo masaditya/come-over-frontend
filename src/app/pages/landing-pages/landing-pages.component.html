@@ -1,3 +1,22 @@
-<p>
-  landing-pages works!
-</p>
+  <div class="container-fluid row">
+    <div class="col-sm-7 text-left">
+      <p>Things to do in <br>
+        <strong>Malang</strong> <br>
+        Looking for something to do in Malang? Whether you're a local, new in town or just cruising through we've got
+        loads of great tips and events. You can explore by location, what's popular, our top picks, free stuff... you
+        got this. Ready?</p>
+      <!-- <button *ngIf="expression" [routerLink]="['/login']" class="btn btn-login">Sign in</button> -->
+    </div>
+    <div class="col-sm-5 splash-right">
+      <img src="../../../assets/Group 10819@3x.png" alt="">
+    </div>
+  </div>
+
+  <h2>Events near Malang</h2>
+  <div class="container">
+    <div class="row">
+      <a *ngFor="let card of events" [routerLink]="['/events', card._id]">
+        <app-card-event [perEvent]=card></app-card-event>
+      </a>
+    </div>
+  </div>

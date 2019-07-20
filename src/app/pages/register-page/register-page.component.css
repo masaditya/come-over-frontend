@@ -1,0 +1,19 @@
+.form-container {
+  padding-top: 4%;
+  margin-bottom: 9%;
+
+}
+
+.image-login img {
+  width: 300px;
+  padding-bottom: 20px;
+}
+
+.image-login h3 {
+  font-weight: bold;
+}
+
+.register-container {
+  border-top: 5px solid #ff561d;
+  border-bottom: 5px solid #ff561d;
+}

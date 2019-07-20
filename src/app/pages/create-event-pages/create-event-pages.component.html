@@ -1,3 +1,14 @@
-<p>
-  create-event-pages works!
-</p>
+<div class="add-form-card">
+  <h2>Add New Event</h2>
+  <hr>
+  <input [(ngModel)]="name" type="text" placeholder="Event Name">
+  <input [(ngModel)]="date" type="datetime-local" placeholder="Date Event">
+  <input [(ngModel)]="location" type="text" placeholder="Location">
+  <input [(ngModel)]="category" type="text" placeholder="Category">
+  <textarea [(ngModel)]="description" name="description" id="desc" placeholder="Description"></textarea>
+  <input type="file" (change)="onFileSelected($event)" name="poster" id="poster">
+  <button (click)="addEvent()" class="btn add-event-submit">Add Event</button>
+  <label for="form-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus molestiae
+    accusantium dolorem odit nostrum adipisci repudiandae neque vero sit ullam consectetur, nam qui nesciunt,
+    provident in corrupti, mollitia sed quam!</label>
+</div>

@@ -1,0 +1,20 @@
+.profile-pic {
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+label {
+  font-size: 15px;
+  color: #7f8c8d;
+}
+
+.button-profile {
+  border: none;
+  background-color: #ff561d;
+  padding: 7px 20px;
+  max-width: 200px;
+  margin: auto 10px;
+  color: #ffff;
+  border-radius: 20px;
+  font-weight: bold;
+}

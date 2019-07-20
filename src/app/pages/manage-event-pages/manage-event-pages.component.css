@@ -1,0 +1,156 @@
+.manage-card {
+  /* background-color: #f23f; */
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.background {
+  background-color: #ecf0f1;
+  padding: 10% auto;
+}
+
+.card-manage-event {
+  border-radius: 10px;
+  margin: 20px 20px;
+  padding-top: 20px;
+  width: 90%;
+  background-color: #FFFF;
+  color: #95a5a6;
+}
+
+.card-manage-event:hover {
+  -webkit-box-shadow: 0px 1px 1px#ecf0f1;
+  -moz-box-shadow: 0px 1px 1px #ecf0f1;
+  box-shadow: 0px 2px 2px #bdc3c7;
+}
+
+.card-manage-event h6 {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.card-manage-event li {
+  padding: 10px 10px;
+  color: #95a5a6;
+  font: 1em sans-serif;
+  list-style: none;
+  margin-left: 15px;
+  cursor: pointer;
+  padding-bottom: 20px;
+}
+
+li i {
+  color: #ff561d;
+  padding-right: 5px;
+}
+
+.add-event-btn {
+  margin-top: 10px;
+  color: #ff561d;
+  background-color: #FFFF;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  margin-left: 30px;
+
+}
+
+.add-event-btn:hover {
+  color: #FFFF;
+  background-color: #ff561d;
+}
+
+
+h2 {
+  margin-top: 50px;
+  margin-left: 20px;
+  font-family: 'Muli',
+    sans-serif;
+  font-weight: bold;
+}
+
+.search-event {
+  margin-top: 10px;
+  color: #95a5a6;
+  background-color: #FFFF;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  margin-left: 30px;
+}
+
+
+.search-event::placeholder {
+  color: #ecf0f1;
+  font-weight: normal;
+}
+
+.add-form-card {
+  color: #95a5a6;
+  border-radius: 5px;
+  margin-top: 15%;
+  padding: 20px;
+  padding-bottom: 70px;
+  background-color: #FFFF;
+  -webkit-box-shadow: 0px 1px 1px#ecf0f1;
+  -moz-box-shadow: 0px 1px 1px #ecf0f1;
+  box-shadow: 0px 2px 2px #bdc3c7;
+}
+
+.add-form-card input {
+  width: 80%;
+  margin-bottom: 40px;
+  padding: 5px 20px;
+  border: none;
+  border-bottom: 1px #95a5a6 solid;
+
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.add-form-card input::placeholder {
+  font-size: 12px;
+}
+
+textarea {
+  width: 80%;
+  height: 100px;
+  border: none;
+  padding: 10px 20px;
+  border-top: 1px #95a5a6 solid;
+  border-bottom: 1px #95a5a6 solid;
+  margin-bottom: 30px;
+}
+
+textarea::placeholder {
+  font-size: 12px;
+}
+
+.add-event-submit {
+  width: 100%;
+  margin-top: 30px;
+  color: #FFFF;
+  background-color: #ff561d;
+  padding: 7px 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  /* margin-left: 30px; */
+}
+
+label {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #95a5a6;
+  text-align: center;
+}
+
+.create {
+  padding-bottom: 3%;
+}
